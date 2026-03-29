@@ -1,0 +1,295 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+}
+
+.topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #020617;
+  position: relative;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.usuarioArea {
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iconeUsuario {
+  font-size: 22px;
+}
+
+.saldo {
+  font-size: 13px;
+}
+
+.menuUser {
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 8px;
+  width: 140px;
+  z-index: 20;
+}
+
+.menuUser button {
+  width: 100%;
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menuUser button:last-child {
+  margin-bottom: 0;
+}
+
+.superodd {
+  margin: 15px 20px;
+  padding: 12px;
+  background: gold;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.jogos {
+  flex: 1;
+  padding: 10px;
+  margin-right: 370px;
+}
+
+.titulo {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.jogo {
+  background: #1e293b;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.times {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.odds {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.oddsBasket {
+  display: flex;
+  gap: 6px;
+}
+
+.odd {
+  background: #334155;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  flex: 1;
+  transition: 0.2s;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.odd:hover {
+  filter: brightness(1.08);
+}
+
+.odd img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.over {
+  background: #475569;
+}
+
+.selecionado {
+  background: #22c55e !important;
+  color: black !important;
+  text-decoration: underline;
+  border-color: #86efac !important;
+}
+
+.boletim {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 350px;
+  background: #020617;
+  padding: 15px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-left: 1px solid #1e293b;
+}
+
+.boletim h2 {
+  margin-top: 0;
+}
+
+.boletim input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+}
+
+.boletim button {
+  width: 100%;
+  padding: 10px;
+  background: green;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.itemBoletim {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.loginTela {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background: #111827;
+  padding: 36px;
+  border-radius: 14px;
+  width: 320px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.loginBox h1 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 30px;
+}
+
+.loginBox input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.senhaBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.olho {
+  border: none;
+  background: #334155;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btnLogin {
+  width: 100%;
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.siteOculto {
+  display: none;
+}
+
+/* cores basquete */
+.verde {
+  background: #166534;
+}
+
+.azul {
+  background: #1d4ed8;
+}
+
+.amarelo {
+  background: #facc15;
+  color: black;
+}
+
+.vermelho {
+  background: #dc2626;
+}
+
+.preto {
+  background: #111827;
+}
+
+.roxo {
+  background: #7e22ce;
+}
+
+.azulclaro {
+  background: #0ea5e9;
+}
+
+.laranja {
+  background: #ea580c;
+}

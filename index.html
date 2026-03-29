@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BET XAVIER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- LOGIN -->
+  <div id="loginTela" class="loginTela">
+    <div class="loginBox">
+      <h1>BET XAVIER</h1>
+
+      <input type="text" id="usuarioInput" placeholder="Usuário" />
+
+      <div class="senhaBox">
+        <input type="password" id="senha" placeholder="Senha" />
+        <button type="button" class="olho" onclick="toggleSenha()">👁️</button>
+      </div>
+
+      <button type="button" class="btnLogin" onclick="login()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- SITE -->
+  <div id="site" class="siteOculto">
+    <div class="topo">
+      <div class="logo">BET XAVIER</div>
+
+      <div class="usuarioArea" onclick="toggleMenu(event)">
+        <div class="iconeUsuario">👤</div>
+        <div class="saldo">R$ <span id="saldo">100.00</span></div>
+
+        <div id="menuUser" class="menuUser">
+          <button type="button" onclick="depositar(event)">💰 Depositar</button>
+          <button type="button" onclick="sacar(event)">🏧 Sacar</button>
+          <button type="button" onclick="logout(event)">🚪 Sair</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="superodd"
+      id="superodd"
+      onclick="apostarSuperodd(this)"
+      title="Aposta única, não combina com outras"
+    >
+      MAIS DE 1.5 GOLS EM TODOS OS JOGOS AMISTOSOS (ODD 5.00)
+    </div>
+
+    <div class="container">
+      <div class="jogos">
+        <!-- FUTEBOL -->
+        <h2 class="titulo">⚽ Futebol</h2>
+        <div class="scroll">
+          <div class="jogo">
+            <div class="times">Colômbia vs França</div>
+            <div class="odds">
+              <div class="odd" onclick="apostar('Colômbia', 4.75, this)">
+                <img src="https://flagcdn.com/w40/co.png" alt="Colômbia" />
+                4.75
+              </div>
+              <div class="odd" onclick="apostar('Empate', 3.80, this)">
+                🤝 3.80
+              </div>
+              <div class="odd" onclick="apostar('França', 1.69, this)">
+                <img src="https://flagcdn.com/w40/fr.png" alt="França" />
+                1.69
+              </div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Barbados vs São Vicente</div>
+            <div class="odds">
+              <div class="odd" onclick="apostar('Barbados', 2.75, this)">
+                <img src="https://flagcdn.com/w40/bb.png" alt="Barbados" />
+                2.75
+              </div>
+              <div class="odd" onclick="apostar('Empate', 3.00, this)">
+                🤝 3.00
+              </div>
+              <div class="odd" onclick="apostar('São Vicente', 2.10, this)">
+                <img src="https://flagcdn.com/w40/vc.png" alt="São Vicente" />
+                2.10
+              </div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Ilhas Virgens vs Anguilla</div>
+            <div class="odds">
+              <div class="odd" onclick="apostar('Ilhas Virgens', 3.00, this)">
+                <img src="https://flagcdn.com/w40/vg.png" alt="Ilhas Virgens" />
+                3.00
+              </div>
+              <div class="odd" onclick="apostar('Empate', 2.50, this)">
+                🤝 2.50
+              </div>
+              <div class="odd" onclick="apostar('Anguilla', 2.15, this)">
+                <img src="https://flagcdn.com/w40/ai.png" alt="Anguilla" />
+                2.15
+              </div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">República Dominicana vs Cuba</div>
+            <div class="odds">
+              <div class="odd" onclick="apostar('Rep. Dominicana', 1.25, this)">
+                <img src="https://flagcdn.com/w40/do.png" alt="República Dominicana" />
+                1.25
+              </div>
+              <div class="odd" onclick="apostar('Empate', 5.00, this)">
+                🤝 5.00
+              </div>
+              <div class="odd" onclick="apostar('Cuba', 11.00, this)">
+                <img src="https://flagcdn.com/w40/cu.png" alt="Cuba" />
+                11.00
+              </div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Ilhas Cayman vs Bahamas</div>
+            <div class="odds">
+              <div class="odd" onclick="apostar('Ilhas Cayman', 2.50, this)">
+                <img src="https://flagcdn.com/w40/ky.png" alt="Ilhas Cayman" />
+                2.50
+              </div>
+              <div class="odd" onclick="apostar('Empate', 3.00, this)">
+                🤝 3.00
+              </div>
+              <div class="odd" onclick="apostar('Bahamas', 2.25, this)">
+                <img src="https://flagcdn.com/w40/bs.png" alt="Bahamas" />
+                2.25
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BASQUETE -->
+        <h2 class="titulo">🏀 Basquete</h2>
+        <div class="scroll">
+          <div class="jogo">
+            <div class="times">Bucks vs Clippers</div>
+            <div class="oddsBasket">
+              <div class="odd verde" onclick="apostar('Bucks', 8.00, this)">8.00</div>
+              <div class="odd azul" onclick="apostar('Clippers', 1.09, this)">1.09</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Pacers vs Heat</div>
+            <div class="oddsBasket">
+              <div class="odd amarelo" onclick="apostar('Pacers', 4.10, this)">4.10</div>
+              <div class="odd vermelho" onclick="apostar('Heat', 1.25, this)">1.25</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Nets vs Kings</div>
+            <div class="oddsBasket">
+              <div class="odd preto" onclick="apostar('Nets', 1.77, this)">1.77</div>
+              <div class="odd roxo" onclick="apostar('Kings', 2.10, this)">2.10</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Hornets vs Celtics</div>
+            <div class="oddsBasket">
+              <div class="odd azulclaro" onclick="apostar('Hornets', 1.83, this)">1.83</div>
+              <div class="odd verde" onclick="apostar('Celtics', 2.00, this)">2.00</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Thunder vs Knicks</div>
+            <div class="oddsBasket">
+              <div class="odd laranja" onclick="apostar('Thunder', 1.28, this)">1.28</div>
+              <div class="odd azul" onclick="apostar('Knicks', 3.00, this)">3.00</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+
+          <div class="jogo">
+            <div class="times">Nuggets vs Warriors</div>
+            <div class="oddsBasket">
+              <div class="odd amarelo" onclick="apostar('Nuggets', 1.20, this)">1.20</div>
+              <div class="odd azul" onclick="apostar('Warriors', 5.00, this)">5.00</div>
+              <div class="odd over" onclick="apostar('Over 220.5', 1.90, this)">Over 220.5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOLETIM -->
+      <div class="boletim">
+        <h2>Boletim</h2>
+        <div id="listaApostas"></div>
+
+        <input type="number" id="valor" placeholder="Valor da aposta" />
+
+        <p>Odd: <span id="oddTotal">0.00</span></p>
+        <p>Retorno: R$ <span id="retorno">0.00</span></p>
+
+        <button type="button" onclick="finalizarAposta()">APOSTAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<hr>
+
+<h2>Extras da disciplina</h2>
+
+<!-- LISTA -->
+<ul>
+<li>Site desenvolvido com HTML</li>
+<li>Estilizado com CSS</li>
+<li>Interatividade com JavaScript</li>
+</ul>
+
+<!-- TABELA -->
+<table border="1">
+<tr>
+<th>Time</th>
+<th>Odd</th>
+</tr>
+<tr>
+<td>Bucks</td>
+<td>8.00</td>
+</tr>
+<tr>
+<td>Clippers</td>
+<td>1.09</td>
+</tr>
+</table>
+
+<!-- LINK -->
+<p>
+<a href="https://www.google.com" target="_blank">Acessar site externo</a>
+</p>
+
+<h3>Vídeo demonstrativo</h3>
+
+<iframe width="400" height="225"
+src="https://www.youtube.com/embed/EY_JapPCN8k"
+title="Vídeo do projeto"
+frameborder="0"
+allowfullscreen>
+</iframe>
